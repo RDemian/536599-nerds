@@ -3,10 +3,122 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <!-- <link href="style.css" rel="stylesheet"> Временно отключить. -->
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
-  </body>
+      <header class="main-header">
+          <nav class="main-nav">
+              <a class="logo" href="index.html"><img src="img/nerds.jpg" alt="nerd's"></a>
+              <ul class="site-nav">
+                  <li><a href="studio.html">Студия</a></li>
+                  <li><a href="client.html">Клиенты</a></li>
+                  <li><a href="nerds-catalog.html">Магазин</a></li>
+                  <li><a href="studio.html">Контакты</a></li>
+                  <li><a class="site-nav_order" href="order.html">Корзина</a></li>
+              </ul>
+          </nav>  
+          <p class="main-header_slogan">
+              <span>Долго, дорого, скурпулезно.</span>
+              Математически выверенный дизайн для вашего сайта или мобильного приложения.
+          </p>
+          <a class="btn" href="#">Узнать больше</a>
+          <ul class="header-slider"><!--Нужно ли для переключателей использовать список?-->
+              <li><input name="header-slider_btn" class="header-slider_btn" type="radio" value="1"></li>
+              <li><input name="header-slider_btn" class="header-slider_btn" type="radio" value="2"></li>
+              <li><input name="header-slider_btn" class="header-slider_btn" type="radio" value="3"></li>
+          </ul>
+      </header>
+      
+      <section class="products">
+          <div class="product-item"><!--Нужен здесь figure? нужен ли здесь список?-->
+              <img src="#" alt="[ Картинка jpg]" width="200" height="100">
+              <h3>Веб-сайты</h3>
+              <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+              <a class="btn product-item_btn" href="#">Заказать</a>
+          </div>
+          <div class="product-item">
+              <img src="#" alt="[ Картинка jpg]" width="200" height="100">
+              <h3>Приложения</h3>
+              <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+              <a class="btn product-item_btn" href="#">Заказать</a>
+          </div>
+          <div class="product-item">
+              <img src="#" alt="[ Картинка jpg]" width="200" height="100">
+              <h3>Презентации</h3>
+              <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+              <a class="btn product-item_btn" href="#">Заказать</a>
+          </div>
+      </section>
+      
+      <section class="about-us">
+          <p class="about-us_slogan">
+              <span>Мы - маленькая, но гордая дизаин-студия из Краснодара.</span>
+              Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+           </p>
+          <div class="about-us_logo">
+              <img src="img/about-us_logo.jpg" alt="[ Картинка about-us_logo.jpg ]" width="100px" height="100px">
+           </div>
+          <ul class="about-us_services">
+              <li>Веб сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+           </ul>
+          <div class="about-us_stat">
+            <label>С 2004 года любим точность во всем:
+                <table class="about-us_stat_tbl">
+                    <tr>
+                        <th>146%</th>
+                        <th>100%</th>
+                        <th>50%</th>
+                    </tr>
+                    <tr>
+                        <td>Уровень самоотдачи</td>
+                        <td>Соблюдение сроков</td>
+                        <td>Минимальная предоплата</td>
+                    </tr>
+                  </table>
+            </label>      
+          </div>
+          <div class="about-us_partners"><!--Нужно ли оборачивать ссылки в список?-->
+              <a class="about-us_partner_link" href="https://htmlacademy.ru/intensive/htmlcss">
+                  <img src="img/html-academy.jpg" alt="[html academy]" width="100px" height="100px">
+              </a>
+              <a class="about-us_partner_link" href="#">
+                  <img src="img/borodinski.jpg" alt="[borodinski]" width="100px" height="100px">
+              </a>
+              <a class="about-us_partner_link" href="#">
+                  <img src="img/pink.jpg" alt="[ PINK ]" width="100px" height="100px">
+              </a>
+              <a class="about-us_partner_link" href="#">
+                  <img src="img/mishka.jpg" alt="[ MISHKA ]" width="100px" height="100px">
+              </a>
+          </div>
+      </section>
+      <footer class="main-footer">
+          <img class="main-footer_map" src="img/map.jpg" width="800px" height="200px">
+          <div class="main-footer_adres">
+              <h3>NЁRDS DESIGN STUDIO</h3>
+              <p>191186, Санкт-Петербург,<br>
+                 ул. Б.Конюшенная, д. 19/8<br>
+                 <span> тел. +7(812)275-75-75</span>  
+              </p>
+              <a class="btn" href="#">Напишите нам</a>
+          </div>
+          <div class="main-footer_social"><!--Нужно ли оборачивать ссылки в список?-->
+            <a class="main-footer_social_btn" href="#">
+                <img src="img/vk.jpg" alt="Вконтакте " width="20px" height="20px">
+              </a>
+            <a class="main-footer_social_btn" href="#">
+                <img src="img/vk.jpg" alt="Фейсбук " width="20px" height="20px">
+              </a>
+            <a class="main-footer_social_btn" href="#">
+                <img src="img/vk.jpg" alt="Инстаграм" width="20px" height="20px">
+              </a>
+            </div>
+          <p class="main-footer_slogan">
+              <span>Давайте дружить, это выгодно!</span>
+              Скидка 10% для друзей из соц-сетей.
+          </p>
+      </footer>
+</body>
 </html>
