@@ -1,0 +1,6 @@
+.main-header, .about-us{
+    border: 1px dashed blue;
+}
+.btn{
+    background-color: lightgray;
+}
