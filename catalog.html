@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Нёрдс</title>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header"><!--Классу задем фон на всю ширину страницы-->
@@ -25,31 +26,31 @@
                 <section class="filters">
                     <h2 class="visual-hidden">Фильтры товаров</h2>
                     <form action="#" method="post">
-                        <div class="filter_item">
-                            <h3>Стоимость:</h3>
+                        <fieldset class="filter_item">
+                            <legend>Стоимость:</legend>
                             <input type="range" name="cost-range">
                             <label>От <input type="number" name="min-cost"></label>
                             <label>До <input type="number" name="max-cost"></label>
-                        </div>
-                        <div class="filter_item">
-                            <h3>Сетка:</h3>
+                        </fieldset>
+                        <fieldset class="filter_item">
+                            <legend>Сетка:</legend>
                             <ul>
                                 <li>
-                                    <input id="adaptive-grid" type="radio" name="adaptive-grid" value="adaptive"> 
+                                    <input id="adaptive-grid" type="radio" name="grid-item" value="adaptive"> 
                                     <label for="adaptive-grid">Адаптивная</label>
                                 </li>
                                 <li>
-                                    <input id="fix-grid" type="radio" name="fix-grid" value="fix">
+                                    <input id="fix-grid" type="radio" name="grid-item" value="fix">
                                     <label for="fix-grid">Фиксированная</label>
                                 </li>    
                                 <li>
-                                    <input id="flex-grid" type="radio" name="flex-grid" value="flex">
+                                    <input id="flex-grid" type="radio" name="grid-item" value="flex">
                                     <label for="flex-grid">Резиновая</label>
                                 </li>    
                             </ul>
-                        </div>
-                        <div class="filter_item">
-                            <h3>Особенности</h3>
+                        </fieldset>
+                        <fieldset class="filter_item">
+                            <legend>Особенности</legend>
                             <ul>
                                 <li>
                                     <input id="chkbox-slider" type="checkbox" name="chkbox-slider">
@@ -72,8 +73,8 @@
                                     <label for="chkbox-order"> Корзина</label>
                                 </li>
                             </ul>
-                        </div>
-                        <input type="submit" value="Показать">
+                        </fieldset>
+                        <button type="submit" name="filter-btn">Показать</button>
                     </form>
                 </section>
                 <section class="products">
@@ -161,12 +162,14 @@
         <div class="layout-position"><!--Класс для центровки содержимого-->
           <!--<img class="main-footer_map" src="img/map.jpg" alt="" width="800" height="200">-->
           <!--Карта как фон у .main-footer-->
-          <div class="main-footer_adres">
+          <div class="main-footer_address">
               <h3>NЁRDS DESIGN STUDIO</h3>
-              <p>191186, Санкт-Петербург,<br>
-                 ул. Б.Конюшенная, д. 19/8<br>
-                 <span> тел. +7(812)275-75-75</span>  
-              </p>
+              <p>
+                 191186, Санкт-Петербург,
+                 ул. Б.Конюшенная, д. 19/8
+                </p>
+              <p>тел. +7(812)275-75-75</p>  
+              
               <a class="btn" href="#">Напишите нам</a>
           </div>
             <img class="main-footer_map-pointer" src="img/map-pointer.jpg" alt="" width="50" height="50">
