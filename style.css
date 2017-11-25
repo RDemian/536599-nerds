@@ -1,5 +1,5 @@
 body {
-    width: 1443px;
+    
     margin: 0;
     padding: 0;
     
@@ -19,12 +19,12 @@ body {
 }
 
 .main-footer {
-    background-image: url(img/map.png);
+    background-image: url('img/map.png');
     background-repeat: no-repeat;
     padding: 1px;
 }
 
-.main-footer_address {
+.footer-address {
     background-color: white;
     width: 300px;
     margin: 5px;
@@ -32,17 +32,29 @@ body {
     padding: 15px;
 }
 
+.footer-address h3 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.main-footer-slogan {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
-a.logo:hover,
-a.logo:focus {
+.logo:hover,
+.logo:focus {
   opacity: 0.7; /*значение 0.8 не заметно, сделал 0.7*/
 }
 
-a.logo:active {
+.logo:active {
   opacity: 0.3;
 }
 
@@ -64,6 +76,15 @@ a.logo:active {
 .user-nav a:active {
   color: rgba(0,0,0,0.3);
 }
+
+.user-nav-cart::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('img/svg-nerds/cart-icon.svg') no-repeat;
+  margin-right: 25px;
+} 
 
 .active-page {
   text-decoration: underline;
@@ -88,80 +109,90 @@ a.logo:active {
 /* Кнопки */
 .btn {
   display: inline-block;
-  width: 240px;
-  height: 50px;
-  
-  font-size: 16px;
-  line-height: 18px;
+  min-width: 140px;
+  padding: 0 10px;  
+  font: inherit;
+  line-height: 50px;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
-  
+      
   border: none;
   background-color: #fb565a;
   border-radius: 3px;
+}
+.catalog-btn {   
+  background-color: #eeeeee;
+  color: #000000;
+  min-width: 240px;
+}
+
+.item-info .btn {
+  min-width: 180px;
+}
+
+.footer-address .btn {
+  min-width: 200px;
+}
+
+.pagination-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-list li{
+  display: inline-block;
+}
+
+.page-btn {
+  background-color: #eeeeee;
+  color: #000000;
+  min-width: 50px;
+  padding: 0;
+}
+
+.current-page {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px #dbdbdb inset;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: #e74246;
+  outline: none;
 }
 
 .btn:active {
   box-shadow: inset 0 3px 0 0 #c13135;
   background-color: #d7373b;
   color: rgba(255,255,255,0.3);
-}
-
-button.btn:active,
-button.btn:focus {
   outline: none;
 }
 
-.catalog-btn {   
-  /*Есть сомнения по поводу ширины шрифта, в макете указано Roboto medium, а на странице медиум шириной 500 выглядит тоньше чем в макете, какая должна быть ширина шрифта?*/
-  width: 260px;
-  background-color: #eeeeee;
-  color: black;
-  font-weight: 600;
-}
-
 .catalog-btn:hover,
-.catalog-btn:focus {
+.catalog-btn:focus,
+.page-btn:hover,
+.page-btn:focus {
   background-color: #dfdfdf;
 }
 
-.catalog-btn:active {
+.catalog-btn:active,
+.page-btn:active {
   box-shadow: inset 0 3px 0 0 #bfbfbf;
   background-color: #d5d5d5;
   color: rgba(0,0,0,0.3);
 }
 
-.page-btn {
-  width: 50px;
-}
-
-.current-page {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 3px #dbdbdb inset; /**/
-}
-
+/*Наши предложения кнопки*/
 ul.product-items {
   list-style-type: none;
 }
 
-.product-item:first-child .btn {
-  width: 160px;
-}
-
 .product-item:nth-child(2) .btn {
-  width: 160px;
   background-color: #00ca74;
 }
 
 .product-item:nth-child(3) .btn {
-  width: 160px;
   background-color: #efc84a;
 }
 
@@ -198,7 +229,7 @@ ul.product-items {
 }
 
 /* Секция о нас */
-.about-us_slogan {
+.about-us-slogan {
     font-size: 45px;
     line-height: 45px;
 }
@@ -209,65 +240,210 @@ ul.product-items {
     font-weight: 700;
 }
 
-.about-us_stat-list {
+.about-us-services {
     list-style-type: none;
 }
 
-.about-us_stat-list li p:first-child {
+.stat-tbl th {
     font-size: 45px;
-    line-height: 11px;
+    line-height: 48px;
     font-weight: 700;
-}
-
-.about-us_stat-list li p:first-child span{
-    /*не смог определить правильные параметры шрифта на макете, интерлиньяж не понятный какой-то*/
-    vertical-align:  super;
-    font-size: 32px;
-    line-height: 11px;
-    font-weight: 700;
-}
-
-.main-footer_address h3 {
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-}
-
-.main-footer_slogan {
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 700;
-}
-
-.main-footer_social-btn {
   
 }
 
-.about-us_partner-link {
+.stat-tbl td{
+    /*vertical-align:  super;*/
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    width: 90px;
+}
+
+.partner-link {
   opacity: 0.2;
 }
 
-.about-us_partner-link:hover,
-.about-us_partner-link:focus {
+.partner-link:hover,
+.partner-link:focus {
   opacity: 1;
 }
 
-.about-us_partner-link:active {
+.partner-link:active {
   opacity: 0.1;
 }
 
-.filters fieldset {
-  border: none;
+/*Из демки*/
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
 }
 
-fieldset ul {
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+/*Фильтры*/
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
+.filter-grids,
+.filter-blocks {
+  padding: 0;
   list-style: none;
+}
+
+.filter-grids li,
+.filter-blocks li {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 fieldset legend {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none; 
+}
+
+/*фильтр сетка*/
+.grid-radio+label,
+.block-check+label {
+  line-height: 42px;
+  color: #283136;
+  padding: 15px;
+}
+
+.filter-grids label,
+.filter-blocks label {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 0 40px;
+}
+
+.grid-radio+label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: url('img/svg-nerds/radio-off.svg') no-repeat;
+  opacity: 0.4;
+}
+
+.grid-radio:checked+label::before {
+  background: url('img/svg-nerds/radio-on.svg') no-repeat;
+}
+
+.block-check+label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: url('img/svg-nerds/checkbox-off.svg') no-repeat;
+  opacity: 0.4;
+}
+
+.block-check:checked+label::before {
+  background: url('img/svg-nerds/checkbox-on.svg') no-repeat;
 }
 
 .sorting-item {
@@ -293,145 +469,47 @@ fieldset legend {
   opacity: 1;
 }
 
-input.sorting-item {
-  display: none;
-}
-
-input[type="radio"],
-input[type="checkbox"]{
-  display: none;
-}
-
-.img-radio,
-.img-check {
-  line-height: 42px;
-  color: #283136;
-}
-/*Как правильно добавить свою картинку к радиобоксу?*/
-/*Также, пропал фокус у радио и чекбокса...*/
-.img-radio span {
-  margin-right: 10px;
-  vertical-align: middle;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url(img/svg-nerds/radio-off.svg) no-repeat;
-  opacity: 0.4;
-}
-
-input[type="radio"]:checked+.img-radio span{
-  background: url(img/svg-nerds/radio-on.svg) no-repeat;
-}
- 
-.img-check span {
-  margin-right: 10px;
-  vertical-align: middle;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url(img/svg-nerds/checkbox-off.svg) no-repeat;
-  opacity: 0.4;
-}
-
-input[type="checkbox"]:checked+.img-check span{
-  background: url(img/svg-nerds/checkbox-on.svg) no-repeat;
-  
-}
-
-input[type="checkbox"]:hover+.img-check span,
-input[type="checkbox"]:focus+.img-check span{
-  opacity: 1;
-}
-
-input[type="radio"]:hover+.img-radio span,
-input[type="radio"]:focus+.img-radio span {
-  opacity: 1;
-}
-
-
 /*Товары*/
 .catalog-item {
-  position: relative;/*почему проападает блок информация без этой строки?*/
-  height: 616px;
-  width: 360px;
+  position: relative;
   margin-bottom: 15px;
-  /*background: url(img/img-sedona.jpg);*/
+  width: 360px;
 }
 
-.catalog-item_browser {
+.item-browser {
   height: 40px;
-  background: url(img/svg-nerds/browser.svg) no-repeat;
+  background: url('img/svg-nerds/browser.svg') no-repeat;
   opacity: 0.12;
 }
 
-.catalog-item:hover .catalog-item_browser {
+.catalog-item:hover .item-browser {
   opacity: 1;
 }
 
-.catalog-item_info{
+.item-info {
   position: absolute;
   top: 385px;
   height: 231px;
   width: 360px;
   background-color: #eeeeee;
+  text-align: center;
   display: none;
 }
 
-.catalog-text {
-  /*откуда берется отступ сверху над надписью SEDONA*/
-  width: 200px;
-  height: 130px;
-  margin-left: 80px;
+.item-info h3,
+.item-info p {
+  display: block;
+  width: 220px;
+  margin: auto;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
-.catalog-item_info h3,
-.catalog-item_info p {
-  text-align: center;
+.item-info h3 {
   text-transform: uppercase;
 }
 
-.catalog-item_info .btn {
-  position: absolute;
-  top: 150px;
-  width: 200px;
-  margin-left: 80px;
-}
-
-.catalog-item:hover .catalog-item_info {
+.catalog-item:hover .item-info {
   display: block;
 }
 
-.sedona-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-sedona.jpg);
-}
-.pink-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-pink.jpg);
-}
-
-.barbershop-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-barbershop.jpg);
-}
-
-.mishka-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-mishka.jpg);
-}
-
-.aplus-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-aplus.jpg);
-}
-
-.kvast-img {
-  height: 576px;
-  width: 360px;
-  background: url(img/img-kvast.jpg);
-}

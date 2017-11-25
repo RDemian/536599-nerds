@@ -21,7 +21,7 @@
               <li><a href="contacts.html">Контакты</a></li>
           </ul>
           <ul class="user-nav">
-              <li><a class="user-nav_order" href="order.html">Корзина</a></li>
+              <li><a class="user-nav-cart" href="cart.html">Корзина</a></li>
           </ul>    
         </nav>
       </div>
@@ -34,7 +34,7 @@
         <p class="slider-text">
             Математически выверенный дизайн для вашего сайта или мобильного приложения.
         </p>
-        <a class="btn" href="#"><p>Узнать больше</p></a>
+        <a class="btn" href="#">Узнать больше</a>
         <ul class="slider-btns">
             <li><input name="slider-btn" type="radio" value="1"></li>
             <li><input name="slider-btn" type="radio" value="2"></li>
@@ -45,76 +45,74 @@
     <main class="main-content"><!--Классу задем фон на всю ширину страницы-->
       <div class="layout-position"><!--Класс для центровки содержимого-->
         <section class="products">
-          <h2 class="visual-hidden">Каталог товаров.</h2>
+          <h2 class="visual-hidden">Наша продукция</h2>
           <ul class="product-items">
             <li class="product-item">
                 <img src="/img/illustration-1.png" alt="" width="300" height="146">
                 <h3>Веб-сайты</h3>
                 <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                <a class="btn" href="#"><p>Заказать</p></a>
+                <a class="btn" href="#">Заказать</a>
             </li>
             <li class="product-item">
                 <img src="/img/illustration-2.png" alt="" width="300" height="146">
                 <h3>Приложения</h3>
                 <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                <a class="btn" href="#"><p>Заказать</p></a>
+                <a class="btn" href="#">Заказать</a>
             </li>
             <li class="product-item">
                 <img src="/img/illustration-3.png" alt="" width="300" height="146">
                 <h3>Презентации</h3>
                 <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-                <a class="btn" href="#"><p>Заказать</p></a>
+                <a class="btn" href="#">Заказать</a>
             </li>
           </ul>
         </section>
         <section class="about-us">
             <h2 class="visual-hidden">О нас.</h2>
-            <div class="about-us_left-column">
-                <p class="about-us_slogan">
+            <div class="about-us__left-column">
+                <p class="about-us-slogan">
                     Мы - маленькая, но гордая дизаин-студия из Краснодара.</p>
-                <p class="about-us_text">
+                <p class="about-us-text">
                     Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
                  </p>
                 <h3>Выполняем заказы на разработку:</h3>
-                <ul class="about-us_services">
-                    <li>Веб сайтов любой сложности</li>
-                    <li>Мобильных приложений для iOS и Android</li>
-                    <li>Слайдшоу и видео для корпоративных презентаций</li>
+                <ul class="about-us-services">
+                    <li><span>-</span> Веб сайтов любой сложности</li>
+                    <li><span>-</span> Мобильных приложений для iOS и Android</li>
+                    <li><span>-</span> Слайдшоу и видео для корпоративных презентаций</li>
                  </ul>
             </div>
-            <div class="about-us_right-column">
-                <div class="about-us_logo">
+            <div class="about-us__right-column">
+                <div class="about-us-logo">
                     <img src="img/nerds-illustration.png" alt="Нёрдс" width="360" height="208">
                  </div>
-            <div class="about-us_stat">
-                <h3>С 2004 года любим точность во всем:</h3>
-                <ul class="about-us_stat-list">
-                  <li>
-                      <p>146<span>%</span></p>
-                      <p>Уровень самоотдачи</p>
-                  </li>
-                  <li>
-                      <p>100<span>%</span></p>
-                      <p>Соблюдение сроков</p>
-                  </li>
-                  <li>
-                      <p>50<span>%</span></p>
-                      <p>Минимальная предоплата</p>
-                  </li>
-                </ul>
+            <div class="about-us-stat">
+              <table class="stat-tbl">
+                <caption>С 2004 года любим точность во всем:</caption>
+                <tr>
+                  <th>146<sup>%</sup></th>
+                  <th>100<sup>%</sup></th>
+                  <th>50<sup>%</sup></th>
+                </tr>
+                <tr>
+                  <td>Уровень самоотдачи</td>
+                  <td>Соблюдение сроков</td>
+                  <td>Минимальная предоплата</td>
+                </tr>
+              </table>
             </div>
           </div>      
-          <div class="about-us_partners">
-                <a class="about-us_partner-link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <div class="us-partners">
+                <a class="partner-link" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img src="img/logo-1.png" alt="html academy" width="199" height="68">
                 </a>
-                <a class="about-us_partner-link" href="#">
+                <a class="partner-link" href="#">
                     <img src="img/logo-2.png" alt="Borodinski" width="209" height="90">
                 </a>
-                <a class="about-us_partner-link" href="#">
+                <a class="partner-link" href="#">
                     <img src="img/logo-3.png" alt="Pink" width="185" height="52">
                 </a>
-                <a class="about-us_partner-link" href="#">
+                <a class="partner-link" href="#">
                     <img src="img/logo-4.png" alt="Mishka" width="173" height="84">
                 </a>
           </div>
@@ -123,32 +121,30 @@
     </main>      
   <footer class="main-footer">
       <div class="layout-position"><!--Класс для центровки содержимого-->
-          <!--<img class="main-footer_map" src="img/map.jpg" alt="" width="800" height="200">-->
-          <!--Карта как фон у .main-footer-->
-          <div class="main-footer_address">
+          <div class="footer-address">
               <h3>NЁRDS DESIGN STUDIO</h3>
               <p>191186, Санкт-Петербург,
                  ул. Б.Конюшенная, д. 19/8
               </p>
               <p> тел. +7(812)275-75-75</p>  
-              <a class="btn" href="#"><p>Напишите нам</p></a>
+              <a class="btn" href="#">Напишите нам</a>
           </div>
-          <img class="main-footer_map-pointer" src="img/map-marker.png" alt="" width="50" height="50">
-          <div class="main-footer_social">
-            <a class="main-footer_social-btn" href="#">
+          <img class="map-pointer" src="img/map-marker.png" alt="" width="50" height="50">
+          <div class="social-btns">
+            <a class="social-btn" href="#">
                 <img src="img/svg-nerds/vk-icon.svg" alt="Вконтакте " width="20" height="20">
               </a>
-            <a class="main-footer_social-btn" href="#">
+            <a class="social-btn" href="#">
                 <img src="img/svg-nerds/fb-icon.svg" alt="Фейсбук " width="20" height="20">
               </a>
-            <a class="main-footer_social-btn" href="#">
+            <a class="social-btn" href="#">
                 <img src="img/svg-nerds/insta-icon.svg" alt="Инстаграм" width="20" height="20">
               </a>
             </div>
-          <p class="main-footer_slogan">
+          <p class="main-footer-slogan">
               Давайте дружить, это выгодно!
           </p>
-          <p class="main-footer_text">
+          <p class="main-footer-text">
               Скидка 10% для друзей из соц-сетей.
           </p>
       </div>      
