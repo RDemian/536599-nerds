@@ -1,52 +1,123 @@
 body {
-    
-    margin: 0;
-    padding: 0;
-    
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-}
-
-.layout-position {
-    margin: 0 auto;
-    width: 1160px;
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .main-header {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
+  padding: 70px 0;
 }
 
-.main-footer {
-    background-image: url('img/map.png');
-    background-repeat: no-repeat;
-    padding: 1px;
+.layout-position {
+  margin: 0 auto;
+  width: 1160px;
+}
+
+.footer-layout-position {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+  /*outline: 1px dashed;*/
+}
+
+.map {
+  position: absolute;
+  margin: 0 -140px;
+  z-index: -1;
+}
+
+.map-pointer {
+  position: absolute;
+  top: 100px;
+  left: 680px;
 }
 
 .footer-address {
-    background-color: white;
-    width: 300px;
-    margin: 5px;
-    border: 1px solid white;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: white;
+  width: 319px;
+  height: 308px;
+  padding: 0;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  margin-right: 700px;
 }
 
 .footer-address h3 {
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
 }
 
-.main-footer-slogan {
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 700;
+.footer-text {
+  display: flex;
+  margin: 50px 0;
+}
+
+.social-btn {
+  display: inline-block;
+  background-color: #e1e1e1;
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+
+.social-btn:hover,
+.social-btn:focus {
+  background-color: #e74246;
+}
+
+.social-btn:active {
+  background-color: #d7373b;
+  opacity:  0.3;
+}
+
+.social-btn:first-child {
+  background-image: url(img/svg-nerds/vk-icon.svg);
+}
+
+.social-btn:nth-child(2) {
+  background-image: url(img/svg-nerds/fb-icon.svg);
+}
+
+.social-btn:nth-child(3) {
+  background-image: url(img/svg-nerds/insta-icon.svg);
+}
+
+.footer-slogan {
+  margin-left: 150px;
+  line-height: 26px;
+}
+
+.footer-slogan span{
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 700;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  outline: none;
 }
 
 .logo:hover,
@@ -58,11 +129,54 @@ a {
   opacity: 0.3;
 }
 
+/* --- Сетка --- */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .site-nav,
 .user-nav {
-    list-style-type: none;
-    line-height: 24px;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.site-nav li {
+  margin: 0 20px;
+}
+
+.visual-hidden {
+  display: none;
+}
+/* --- Сетка 'Наша продукция' --- */
+.product-items {
+  display: flex;
+  padding: 60px 0;
+}
+
+.product-item {
+  margin-right: 100px;
+}
+
+.product-item p {
+  width: 250px;
+}
+
+.us-partners {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding: 20px 0;
 }
 
 .site-nav a:hover,
@@ -96,10 +210,6 @@ a {
   line-height: 55px;
 }
 
-.slider-btns {
-  list-style-type: none;
-}
-
 .product-item h3 {
     font-size: 24px;
     line-height: 30px;
@@ -125,6 +235,11 @@ a {
   background-color: #eeeeee;
   color: #000000;
   min-width: 240px;
+}
+
+.slider-btn {
+  min-width: 220px;
+  margin-top: 35px;
 }
 
 .item-info .btn {
@@ -229,34 +344,82 @@ ul.product-items {
 }
 
 /* Секция о нас */
-.about-us-slogan {
-    font-size: 45px;
-    line-height: 45px;
+.about-us {
+  display: flex;
+  padding: 60px 0; 
+  flex-wrap: wrap;
+  justify-content: space-between
 }
+
+.about-us__left-column {
+  width: 650px;
+}
+
+.about-us-slogan {
+  font-size: 45px;
+  line-height: 45px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.about-us-text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+
 .about-us h3{
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .about-us-services {
-    list-style-type: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us-services li {
+  margin-bottom: 20px
+}
+
+.about-us-services span {
+  display: inline-block;
+  height: 2px;
+  width: 25px;
+  background-color: #fb565a;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.about-us-logo {
+  margin-bottom: 30px;
+}
+
+.stat-tbl caption {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 30px;
 }
 
 .stat-tbl th {
-    font-size: 45px;
-    line-height: 48px;
-    font-weight: 700;
-  
+  font-size: 45px;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: left
 }
 
 .stat-tbl td{
-    /*vertical-align:  super;*/
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 400;
-    width: 90px;
+  /*vertical-align:  super;*/
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  width: 120px;
+  padding-top: 15px; 
 }
 
 .partner-link {
@@ -270,6 +433,48 @@ ul.product-items {
 
 .partner-link:active {
   opacity: 0.1;
+}
+/*Сетка страницы каталога*/
+.main-container{
+  margin-top: 50px;
+}
+
+.catalog-name {
+  margin-top: 60px;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.catalog-layout-position {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog-products {
+  display: flex;
+  width: 760px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-sorting {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.catalog-sorting h3 {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 /*Из демки*/
@@ -370,6 +575,7 @@ ul.product-items {
 /*Фильтры*/
 .filter-item {
   margin: 0;
+  margin-bottom: 50px;
   padding: 0;
   border: none;
   position: relative;
@@ -472,7 +678,7 @@ input[type="checkbox"] {
 /*Товары*/
 .catalog-item {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   width: 360px;
 }
 
@@ -489,7 +695,7 @@ input[type="checkbox"] {
 .item-info {
   position: absolute;
   top: 385px;
-  height: 231px;
+  height: 230px;
   width: 360px;
   background-color: #eeeeee;
   text-align: center;
@@ -498,14 +704,15 @@ input[type="checkbox"] {
 
 .item-info h3,
 .item-info p {
-  display: block;
-  width: 220px;
-  margin: auto;
-  margin-bottom: 35px;
+  display: inline-block;
+  width: 230px;
+  margin: 0;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .item-info h3 {
+  margin-top:  35px;
   text-transform: uppercase;
 }
 
@@ -513,3 +720,71 @@ input[type="checkbox"] {
   display: block;
 }
 
+/*Форма связи*/
+/* форму связи отображать нужно с помощью JS ? */
+.feedback {
+  display: flex;
+  visibility: hidden;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -180px;
+  left: 70px;
+  
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,1,1,0.75);
+  box-sizing: border-box;
+  width: 960px;
+  height: 590px;
+  padding: 75px 100px 85px 100px;
+  margin: 50px;
+}
+
+.feedback h2 {
+  margin: 0;
+  font-size: 45px;
+  line-height: 45px;
+  margin-right: 400px; 
+}
+
+.feedback label {
+  width: 360px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.feedback input {
+  box-sizing: border-box;
+  width: 360px;
+  line-height: 26px;
+  padding: 10px;
+  border: none;
+  outline: 3px solid #d7dcde;
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+  outline: 3px solid #b4b9bb;
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+  outline: 3px solid #000000;
+}
+
+.feedback input:invalid {
+  color: #e74246;
+}
+
+.feedback textarea {
+  box-sizing: border-box;
+  width: 760px;
+  height: 118px;
+  margin-bottom: 45px;
+  padding: 10px;
+  outline: 3px solid #d7dcde;
+  border: none;
+}
