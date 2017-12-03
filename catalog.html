@@ -5,7 +5,7 @@
         <title>HTML Academy: Нёрдс</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="normalize.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
       <header class="main-header"><!--Классу задем фон на всю ширину страницы-->
@@ -21,7 +21,7 @@
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-nav">
-              <li><a class="user-nav_order" href="order.html">Корзина</a></li>
+              <li><a class="user-nav-cart" href="cart.html">Корзина</a></li>
             </ul>    
           </nav>
           <h1 class="catalog-name">Магазин готовых шаблонов</h1>
@@ -31,7 +31,7 @@
       <div class="catalog-layout-position">
         <section class="filters">
           <h2 class="visual-hidden">Фильтры товаров</h2>
-          <form action="#" method="post">
+          <form action="#1" method="post">
             <fieldset class="filter-item">
               <legend>Стоимость:</legend>
               <div class="range-filter">
@@ -95,26 +95,24 @@
           </section>
           <section class="catalog-products">
             <h2 class="visual-hidden">Товары</h2>
-            <form class="catalog-sorting"  action="#" method="post">
+            <form class="catalog-sorting"  action="#1" method="post">
               <h3>Сортировать:</h3>
               <div class="sorting-variant">
                 <input class="sorting-item" id="sorting-cost" type="radio" name="sorting-item" value="cost"> 
-                <label class="sorting-item" for="sorting-cost">По цене</label>
+                <label for="sorting-cost">По цене</label>
                 <input class="sorting-item" id="sorting-type" type="radio" name="sorting-item" value="type">
-                <label class="sorting-item" for="sorting-type">По типу</label>
+                <label for="sorting-type">По типу</label>
                 <input class="sorting-item" id="sorting-name" type="radio" name="sorting-item" value="name">
-                <label class="sorting-item" for="sorting-name">По наименованию</label>
+                <label for="sorting-name">По наименованию</label>
               </div>
               <div class="sorting-variant">
                 <input class="sorting-item" id="sorting-down" type="radio" name="sorting-direct" value="down"> 
-                <label class="sorting-item" for="sorting-down"><img src="img/svg-nerds/icon-down-dir.svg" alt="По убыв."></label>
+                <label for="sorting-down"><img src="img/svg-nerds/icon-down-dir.svg" alt="По убыв."></label>
                 <input class="sorting-item" id="sorting-up" type="radio" name="sorting-direct" value="up">
-                <label class="sorting-item" for="sorting-up"><img src="img/svg-nerds/icon-up-dir.svg" alt="По возр."></label>
+                <label for="sorting-up"><img src="img/svg-nerds/icon-up-dir.svg" alt="По возр."></label>
               </div>  
             </form>
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="sedona-content">
                   <img src="img/img-sedona.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -125,8 +123,6 @@
                 </div>    
               </div>
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="pink-content">
                   <img src="img/img-pink.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -137,8 +133,6 @@
                 </div>
               </div>  
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="barbershop-content">
                   <img src="img/img-barbershop.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -149,8 +143,6 @@
                 </div>  
               </div>
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="mishka-content">
                   <img src="img/img-mishka.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -161,8 +153,6 @@
                 </div>
               </div>
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="aplus-content">
                   <img src="img/img-aplus.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -173,8 +163,6 @@
                 </div>  
               </div>
               <div class="catalog-item">
-                <div class="item-browser">
-                </div>
                 <div class="kvast-catalog">
                   <img src="img/img-kvast.jpg" alt="" width="360" height="576">
                   <div class="item-info">
@@ -185,10 +173,10 @@
                 </div>  
               </div>
             <ul class="pagination-list">
-              <li><a class="btn page-btn current-page" href="#">1</a></li>
-              <li><a class="btn page-btn" href="#">2</a></li>
-              <li><a class="btn page-btn" href="#">3</a></li>
-              <li><a class="btn catalog-btn" href="#">Следующая</a></li>
+              <li><a class="btn page-btn current-page" href="#1">1</a></li>
+              <li><a class="btn page-btn" href="#1">2</a></li>
+              <li><a class="btn page-btn" href="#1">3</a></li>
+              <li><a class="btn catalog-btn" href="#1">Следующая</a></li>
             </ul>
           </section>
         </div>    
@@ -203,13 +191,14 @@
               ул. Б.Конюшенная, д. 19/8
             </p>
             <p> тел. +7(812)275-75-75</p>  
-            <button type="button" id="feedback-btn" class="btn">Напишите нам</button>
-            <form class="feedback" action="#" method="post">
+            <button type="button" id="feedback-btn" class="btn feedback-btn">Напишите нам</button>
+            <form class="feedback" action="" method="post">
               <h2>Напишите нам</h2>
-              <a href="#1" alt="close"><img src="img/svg-nerds/close-cross.svg" width="21px" height="21px"></a>
+              <a href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
               <label for="inp-name">Ваше имя:</label>
               <label for="inp-mail">Ваш e-mail:</label>
-              <input id="inp-name" type="text" placeholder="Представьтесь, пожалуйста" required autofocus>   <input id="inp-mail" type="email" placeholder="Для отправки ответа" required>
+              <input id="inp-name" type="text" placeholder="Представьтесь, пожалуйста" required>
+              <input id="inp-mail" type="email" placeholder="Для отправки ответа" required>
               <label for="inp-text">Текст письма:</label>
               <textarea id="inp-text" rows="4" placeholder="В свободной форме"></textarea>
               <button class="btn" type="submit">Отправить</button>
@@ -217,9 +206,9 @@
           </div>
           <div class="footer-text">
             <div class="social-btns">
-              <a class="social-btn" href="#"></a>
-              <a class="social-btn" href="#"></a>
-              <a class="social-btn" href="#"></a>
+              <a class="social-btn" href="#1"></a>
+              <a class="social-btn" href="#1"></a>
+              <a class="social-btn" href="#1"></a>
             </div>
             <div class="footer-slogan">
               <span>Давайте дружить, это выгодно!</span><br>
