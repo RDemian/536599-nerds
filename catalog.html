@@ -103,7 +103,7 @@
                 <input class="sorting-item" id="sorting-type" type="radio" name="sorting-item" value="type">
                 <label for="sorting-type">По типу</label>
                 <input class="sorting-item" id="sorting-name" type="radio" name="sorting-item" value="name">
-                <label for="sorting-name">По наименованию</label>
+                <label for="sorting-name">По названию</label>
               </div>
               <div class="sorting-variant">
                 <input class="sorting-item" id="sorting-down" type="radio" name="sorting-direct" value="down"> 
@@ -182,40 +182,43 @@
         </div>    
       </main>
       <footer class="main-footer">
-        <div class="footer-layout-position">
-          <img class="map" src="img/map.png" alt="" width="1440" height="416">
-          <img class="map-pointer" src="img/map-marker.png" alt="" width="231" height="190">
-          <div class="footer-address">
-            <h3>NЁRDS DESIGN STUDIO</h3>
-            <p>191186, Санкт-Петербург,<br>
-              ул. Б.Конюшенная, д. 19/8
-            </p>
-            <p> тел. +7(812)275-75-75</p>  
-            <button type="button" id="feedback-btn" class="btn feedback-btn">Напишите нам</button>
-            <form class="feedback" action="" method="post">
-              <h2>Напишите нам</h2>
-              <a href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
-              <label for="inp-name">Ваше имя:</label>
-              <label for="inp-mail">Ваш e-mail:</label>
-              <input id="inp-name" type="text" placeholder="Представьтесь, пожалуйста" required>
-              <input id="inp-mail" type="email" placeholder="Для отправки ответа" required>
-              <label for="inp-text">Текст письма:</label>
-              <textarea id="inp-text" rows="4" placeholder="В свободной форме"></textarea>
-              <button class="btn" type="submit">Отправить</button>
-            </form>
+      <div class="footer-layout-position"><!--Класс для центровки содержимого-->
+        <img class="map" src="img/map.png" alt="" width="1440" height="416">
+        <img class="map-pointer" src="img/map-marker.png" alt="" width="231" height="190">
+        <div class="footer-address">
+          <h3>NЁRDS DESIGN STUDIO</h3>
+          <p>191186, Санкт-Петербург,<br>
+            ул. Б.Конюшенная, д. 19/8
+          </p>
+          <p> тел. +7(812)275-75-75</p>  
+          <button type="button" id="feedback-btn" class="btn feedback-btn">Напишите нам</button>
+          <form class="feedback" action="#1" method="post">
+            <h2>Напишите нам</h2>
+            <a class="close-feedback" href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
+            <label for="inp-name">Ваше имя:</label>
+            <label for="inp-mail">Ваш e-mail:</label>
+            <input id="inp-name" type="text" placeholder="Представьтесь, пожалуйста" required >
+            <input id="inp-mail" type="email" placeholder="Для отправки ответа" required>
+            <label for="inp-text">Текст письма:</label>
+            <textarea id="inp-text" rows="4" placeholder="В свободной форме"></textarea>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="footer-text">
+          <div class="social-btns">
+            <a class="social-btn" href="#1"></a>
+            <a class="social-btn" href="#1"></a>
+            <a class="social-btn" href="#1"></a>
           </div>
-          <div class="footer-text">
-            <div class="social-btns">
-              <a class="social-btn" href="#1"></a>
-              <a class="social-btn" href="#1"></a>
-              <a class="social-btn" href="#1"></a>
-            </div>
-            <div class="footer-slogan">
-              <span>Давайте дружить, это выгодно!</span><br>
-              Скидка 10% для друзей из соц-сетей.
-            </div>
+          <div class="footer-slogan">
+            <p><span>Давайте дружить, это выгодно!</span></p>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
           </div>
-        </div>      
-      </footer>
+        </div>
+      </div>      
+    </footer>
+      
+      <script src="js/script.js"> </script>
+        
     </body>
 </html>

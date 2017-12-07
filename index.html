@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!--При нажатии на ссылки у которых в атрибуте href="#" стоит решетка, происходит перемещение к началу страницы, это нормальное поведение?, добавил в атрибут "#1" чтобы перемещение не происходило...-->
   </head>
   <body>
     <header class="main-header"><!--Классу задем фон на всю ширину страницы-->
@@ -27,6 +26,7 @@
         </nav> 
       </div>
       <div class="layout-position"><!--Класс для центровки содержимого-->
+        
         <section class="slider">
           <div class="container">
             <h2 class="visual-hidden">Преимущества</h2>
@@ -55,7 +55,7 @@
                 <a class="btn slider-btn" href="#1">Узнать больше</a>
               </li>
             </ul>  
-            </div>
+          </div>
         </section>
       </div>  
     </header>
@@ -64,19 +64,19 @@
         <section class="products">
           <h2 class="visual-hidden">Наша продукция</h2>
           <ul class="product-items">
-            <li class="product-item">
+            <li class="product-item product-item-site">
               <img src="img/illustration-1.png" alt="Сайты" width="300" height="146">
               <h3>Веб-сайты</h3>
               <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
               <a class="btn" href="#1">Заказать</a>
             </li>
-            <li class="product-item">
+            <li class="product-item product-item-application">
               <img src="img/illustration-2.png" alt="Приложения" width="300" height="146">
               <h3>Приложения</h3>
               <p>Покорите топ-10 приложений в AppStore и Google Play</p>
               <a class="btn" href="#1">Заказать</a>
             </li>
-            <li class="product-item">
+            <li class="product-item product-item-presentation">
               <img src="img/illustration-3.png" alt="Презентации" width="300" height="146">
               <h3>Презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
@@ -151,7 +151,7 @@
           </p>
           <p> тел. +7(812)275-75-75</p>  
           <button type="button" id="feedback-btn" class="btn feedback-btn">Напишите нам</button>
-          <form class="feedback" action="" method="post">
+          <form class="feedback" action="#1" method="post">
             <h2>Напишите нам</h2>
             <a class="close-feedback" href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
             <label for="inp-name">Ваше имя:</label>
@@ -170,28 +170,15 @@
             <a class="social-btn" href="#1"></a>
           </div>
           <div class="footer-slogan">
-            <span>Давайте дружить, это выгодно!</span><br>
-            Скидка 10% для друзей из социальных сетей.
+            <p><span>Давайте дружить, это выгодно!</span></p>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </div>
       </div>      
     </footer>
-    <script>
-      var clk_btn;
-      var form_feedback;
-      clk_btn = document.querySelector(".feedback-btn");
-      form_feedback = document.querySelector(".feedback");
-      close_feedback = document.querySelector(".close-feedback");
-      
-      clk_btn.addEventListener("click", function(evt) {
-        evt.preventDefault;
-        form_feedback.classList.add("feedback-show");
-      })
-      
-      close_feedback.addEventListener("click", function() {
-        form_feedback.classList.remove("feedback-show");
-      })
-    </script>
+    
+    <script src="js/script.js"> </script>
+  
   </body>
 </html>
 

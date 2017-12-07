@@ -10,7 +10,7 @@ body {
 
 .main-header {
   background-color: #eeeeee;
-  padding: 70px 0 1px 0;
+  padding: 50px 0 1px 0;
 }
 
 .layout-position {
@@ -30,14 +30,14 @@ body {
 
 .map {
   position: absolute;
-  margin: 40px -140px;
+  margin: 39px -139px;
   z-index: -1;
 }
 
 .map-pointer {
   position: absolute;
-  top: 130px;
-  left: 680px;
+  top: 128px;
+  left: 681px;
 }
 
 .footer-address {
@@ -60,11 +60,13 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  margin-top: 18px;
 }
 
 .footer-address p {
-  margin-top: 5px;
-  margin-bottom: 13px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  padding-left: 3px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -72,7 +74,7 @@ body {
 
 .footer-text {
   display: flex;
-  margin: 50px 0;
+  margin: 52px 0;
 }
 
 .social-btn {
@@ -83,8 +85,9 @@ body {
   border-radius: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 5px;
+  margin-right: 7px;
   margin-top: 70px;
+  vertical-align: middle;
 }
 
 .social-btn:hover,
@@ -98,26 +101,30 @@ body {
 }
 
 .social-btn:first-child {
-  background-image: url(../img/svg-nerds/vk-icon.svg);
+  background-image: url('../img/svg-nerds/vk-icon.svg');
 }
 
 .social-btn:nth-child(2) {
-  background-image: url(../img/svg-nerds/fb-icon.svg);
+  background-image: url('../img/svg-nerds/fb-icon.svg');
 }
 
 .social-btn:nth-child(3) {
-  background-image: url(../img/svg-nerds/insta-icon.svg);
+  background-image: url('../img/svg-nerds/insta-icon.svg');
 }
 
 .footer-slogan {
-  margin-left: 135px;
-  line-height: 32px;
-  margin-top: 72px;
+  margin-left: 134px;
+  margin-top: 64px;
+}
+
+.footer-slogan p{
+  margin: 0;
+  margin-top: 4px;
 }
 
 .footer-slogan span {
   font-size: 36px;
-  line-height: 46px;
+  line-height: 50px;
   font-weight: 700;
 }
 
@@ -155,6 +162,8 @@ a:focus {
 /* Кнопки */
 .btn {
   display: inline-block;
+  box-sizing: content-box;
+  vertical-align: middle;
   min-width: 140px;
   padding: 0 10px;  
   font: inherit;
@@ -181,24 +190,28 @@ a:focus {
   min-width: 180px;
 }
 
-.footer-address .btn {
-  margin-top: 25px;
-  min-width: 220px;
+.feedback-btn {
+  margin-top: 24px;
+  min-width: 200px;
 }
 
 .pagination-list {
   list-style: none;
   padding: 0;
+  margin-top: -13px;
+  margin-bottom: 20px;
 }
 
 .pagination-list li{
   display: inline-block;
+  vertical-align: middle;
 }
 
 .page-btn {
   background-color: #eeeeee;
   color: #000000;
   min-width: 50px;
+  margin-right: 7px;
   padding: 0;
 }
 
@@ -224,7 +237,7 @@ a:focus {
 .catalog-btn:focus,
 .page-btn:hover,
 .page-btn:focus {
-  background-color: #dfdfdf;
+  background-color: #f1f1f1;
 }
 
 .catalog-btn:active,
@@ -305,48 +318,48 @@ a:focus {
 
 .product-item p {
   width: 250px;
-  margin: 16px 0 35px 0;
+  margin: 16px 0 33px 0;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 25px;
   font-weight: 500;
 }
 
-.product-item:nth-child(2) .btn {
+.product-item-application .btn {
   background-color: #00ca74;
 }
 
-.product-item:nth-child(3) .btn {
+.product-item-presentation .btn {
   background-color: #efc84a;
 }
 
-.product-item:first-child .btn:hover, 
-.product-item:first-child .btn:focus 
+.product-item-site .btn:hover, 
+.product-item-site .btn:focus 
 {
   background-color: #e74246
 }
 
-.product-item:nth-child(2) .btn:hover,
-.product-item:nth-child(2) .btn:focus
+.product-item-application .btn:hover,
+.product-item-application .btn:focus
 {
   background-color: #00bc6c;
 }
 
-.product-item:nth-child(3) .btn:hover,
-.product-item:nth-child(3) .btn:focus 
+.product-item-presentation .btn:hover,
+.product-item-presentation .btn:focus 
 {
   background-color: #eab534;
 }
 
-.product-item:first-child .btn:active {
+.product-item-site .btn:active {
   background-color: #d7373b
 }
 
-.product-item:nth-child(2) .btn:active {
+.product-item-application .btn:active {
   box-shadow: inset 0 3px 0 0 #009958;
   background-color: #00aa62;
 }
 
-.product-item:nth-child(3) .btn:active {
+.product-item-presentation .btn:active {
   box-shadow: inset 0 3px 0 0 #ce961f;
   background-color: #e5a722;
 }
@@ -373,14 +386,14 @@ a:focus {
 
 .about-us-slogan p {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 34px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
 .about-us-logo {
-  margin-top: 38px;
+  margin-top: 39px;
 }
 
 .about-us-services h3 {
@@ -416,17 +429,15 @@ a:focus {
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
-  margin-left: 10px;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .stat-tbl th {
   font-size: 45px;
-  line-height: 48px;
+  line-height: 45px;
   font-weight: bold;
   text-align: left;
-  padding-left: 3px;  
 }
 
 .stat-tbl td{
@@ -434,8 +445,8 @@ a:focus {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  width: 120px;
-  padding-top: 15px; 
+  padding-top: 18px; 
+  width: 117px;
 }
 
 /* * * Наши партнеры * * */
@@ -451,13 +462,13 @@ a:focus {
   padding: 50px 15px 40px 5px;
 }
 
-/*.us-partners a:not(:first-of-type)::before {*/
 .partner-separator {
   content: "";
   display: inline-block;
   width: 2px;
   height: 52px;
   background-color: #eeeeee;
+  vertical-align: middle;
 }
 
 .partner-link {
@@ -479,7 +490,7 @@ a:focus {
 
 .catalog-name {
   margin: 0;
-  margin-top: 78px;
+  margin-top: 77px;
   margin-bottom: 108px;
   font-size: 55px;
   line-height: 55px;
@@ -500,8 +511,6 @@ a:focus {
 }
 
 .active-page::after {
-  /*text-decoration: underline;
-  text-decoration-color: #fb565a;*/
   content: "";
   position: absolute;
   left: 0;
@@ -511,24 +520,9 @@ a:focus {
 }
 
 /*Фильтры на странице каталога*/
-.filter-item {
-  margin: 0;
-  margin-bottom: 55px;
-  padding: 0;
-  border: none;
-  position: relative;
-}
-
-.filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 .range-filter {
   width: 260px;
-  margin-top: 52px;
+  margin-top: 42px;
 }
 
 .range-controls {
@@ -536,18 +530,16 @@ a:focus {
   
   height: 41px;
   margin-bottom: 15px;
-  padding-top: 39px;
+  padding-top: 40px;
   padding-right: 20px;
   padding-left: 20px;
   
   background-color: #f1f1f1;
-  
   border-radius: 5px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: #d7dcde;
 }
 
@@ -591,15 +583,16 @@ a:focus {
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .price-controls input {
   width: 60px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   margin-left: 10px;
+  margin-bottom: 15px;
   
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
+  font-family: inherit;
   text-align: center;
   color: #283136;
   
@@ -612,15 +605,33 @@ a:focus {
   text-align: right;
 }
 
+.filter-item {
+  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 45px;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
 .grids-filter li,
 .blocks-filter li {
   margin: 0;
   margin-left: -15px;
-  margin-top: 16px;
+  /*margin-top: 18px;*/
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.grid-radio,
+.block-check,
+.sorting-item {
   opacity: 0;
 }
 
@@ -628,17 +639,17 @@ input[type="checkbox"] {
 .block-check+label {
   position: relative;
   font-size: 16px;
-  line-height: 16px;
-  padding: 0 40px;
+  line-height: 40px;
+  padding: 0;
+  padding-left: 35px;
   color: #898e91;
 }
 
-.grid-radio+label::before,
-.block-check+label::before {
+.grid-radio + label::before,
+.block-check + label::before {
   content: "";
-  display: inline-block;
   position: absolute;
-  top: auto;
+  top: 0;
   left: 0;
   width: 25px;
   height: 25px;
@@ -646,34 +657,34 @@ input[type="checkbox"] {
   opacity: 0.4;
 }
 
-.block-check+label::before {
+.block-check + label::before {
   background: url('../img/svg-nerds/checkbox-off.svg') no-repeat;
 }
 
-.grid-radio+label:hover,
-.grid-radio:focus+label,
-.block-check+label:hover,
+.grid-radio + label:hover,
+.grid-radio:focus + label,
+.block-check + label:hover,
 .block-check:focus+label {
   color: #4d4d4d;
 }
 
-.grid-radio+label:hover::before,
-.grid-radio:focus+label::before,
-.block-check+label:hover::before,
-.block-check:focus+label::before {
+.grid-radio + label:hover::before,
+.grid-radio:focus + label::before,
+.block-check + label:hover::before,
+.block-check:focus + label::before {
   opacity: 0.8;
 }
 
-.grid-radio:checked+label::before {
+.grid-radio:checked + label::before {
   background: url('../img/svg-nerds/radio-on.svg') no-repeat;
 }
 
-.block-check:checked+label::before {
+.block-check:checked + label::before {
   background: url('../img/svg-nerds/checkbox-on.svg') no-repeat;
 }
 
-.block-check+label:disabled,
-.grid-radio+label:disabled {
+.block-check + label:disabled,
+.grid-radio + label:disabled {
   color: #d8dadb;
 }
 
@@ -687,7 +698,8 @@ input[type="checkbox"] {
 
 .catalog-sorting h3 {
   margin: 0;
-  margin-bottom: 95px;
+  margin-bottom: 97px;
+  margin-right: 210px;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
@@ -695,6 +707,7 @@ input[type="checkbox"] {
 
 .sorting-item+label {
   font-size: 14px;
+  line-height: 14px;
   text-transform: uppercase;
   color: rgba(0,0,0,1);
   opacity: 0.3;
@@ -770,8 +783,9 @@ input[type="checkbox"] {
   display: inline-block;
   width: 230px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
+  vertical-align: middle;
 }
 
 .item-info h3 {
@@ -787,13 +801,12 @@ input[type="checkbox"] {
 
 /*Форма связи*/
 .feedback {
+  visibility: hidden;
   display: flex;
   flex-wrap: wrap;
-  
-  visibility: hidden;
-  
   justify-content: space-between;
   align-items: center;
+  z-index: 6;
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0,1,1,0.75);
   box-sizing: border-box;
@@ -809,6 +822,19 @@ input[type="checkbox"] {
 
 .feedback-show {
   visibility: visible;
+}
+
+.close-feedback {
+  opacity: 0.3;
+}
+
+.close-feedback:hover,
+.close-feedback:focus {
+  opacity: 1;
+}
+
+.close-feedback:active {
+  opacity: 0.1;
 }
 
 .feedback h2 {
@@ -859,7 +885,7 @@ input[type="checkbox"] {
   border: none;
 }
 
-/*Слайдер скопировал из демо*/
+/* Слайдер */
 .slider {
   position: relative;
   background-color: #eeeeee;
@@ -869,7 +895,7 @@ input[type="checkbox"] {
   position: absolute;
   left: 50%;
   bottom: 104px;
-  z-index: 100;
+  z-index: 5;
   
   width: 160px;
   height: 18px;
@@ -877,12 +903,14 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 0;
   transform: translateX(-50%);
+  
 }
 
 .slider-controls label {
   position: relative;
   
   display: inline-block;
+  vertical-align: middle;
   width: 18px;
   height: 18px;
   padding: 8px;
@@ -920,19 +948,19 @@ input[type="checkbox"] {
 }
 
 .slider-item:nth-child(1) {
-  background-image: url("../img/slide1.png");
+  background-image: url('../img/slide1.png');
   background-repeat: no-repeat;
   background-position: 93% 18px;
 }
 
 .slider-item:nth-child(2) {
-  background-image: url("../img/slide2.png");
+  background-image: url('../img/slide2.png');
   background-repeat: no-repeat;
   background-position: 100% 0;
 }
 
 .slider-item:nth-child(3) {
-  background-image: url("../img/slide3.png");
+  background-image: url('../img/slide3.png');
   background-repeat: no-repeat;
   background-position: 100% 20px;
 }
