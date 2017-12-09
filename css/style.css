@@ -18,26 +18,9 @@ body {
   width: 1160px;
 }
 
-.footer-layout-position {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 1160px;
-  margin: 0 auto;
-  /*outline: 1px dashed;*/
-}
-
 .map {
-  position: absolute;
-  margin: 39px -139px;
-  z-index: -1;
-}
-
-.map-pointer {
-  position: absolute;
-  top: 128px;
-  left: 681px;
+  background: url('../img/map.png') 50% 50% no-repeat;
+  padding: 50px 0;
 }
 
 .footer-address {
@@ -51,20 +34,17 @@ body {
   width: 319px;
   height: 308px;
   padding: 30px 50px;
-  
-  margin-top: 95px;
-  margin-right: 700px;
 }
 
 .footer-address h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .footer-address p {
-  margin-top: 4px;
+  margin-top: 5px;
   margin-bottom: 15px;
   padding-left: 3px;
   font-size: 16px;
@@ -74,7 +54,7 @@ body {
 
 .footer-text {
   display: flex;
-  margin: 52px 0;
+  margin: 0 0 52px 0;
 }
 
 .social-btn {
@@ -86,7 +66,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 7px;
-  margin-top: 70px;
+  margin-top: 75px;
   vertical-align: middle;
 }
 
@@ -114,7 +94,7 @@ body {
 
 .footer-slogan {
   margin-left: 134px;
-  margin-top: 64px;
+  margin-top: 69px;
 }
 
 .footer-slogan p{
@@ -199,7 +179,7 @@ a:focus {
   list-style: none;
   padding: 0;
   margin-top: -13px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .pagination-list li{
@@ -458,7 +438,7 @@ a:focus {
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
   margin-top: 48px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   padding: 50px 15px 40px 5px;
 }
 

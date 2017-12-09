@@ -1,11 +1,13 @@
 var feedbackForm = document.querySelector('.feedback');
 var feedbackBtn = document.querySelector('.feedback-btn');
 var feedbackClose = document.querySelector('.close-feedback');
+var login = feedbackForm.querySelector('.name-feedback');
+
 
 
 feedbackBtn.addEventListener('click', function () {
   feedbackForm.classList.add('feedback-show');
-
+  login.focus();
 });
 
 feedbackClose.addEventListener('click', function () {

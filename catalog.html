@@ -182,10 +182,9 @@
         </div>    
       </main>
       <footer class="main-footer">
-      <div class="footer-layout-position"><!--Класс для центровки содержимого-->
-        <img class="map" src="img/map.png" alt="" width="1440" height="416">
-        <img class="map-pointer" src="img/map-marker.png" alt="" width="231" height="190">
-        <div class="footer-address">
+      <div class="map">
+        <div class="layout-position">
+          <div class="footer-address">
           <h3>NЁRDS DESIGN STUDIO</h3>
           <p>191186, Санкт-Петербург,<br>
             ул. Б.Конюшенная, д. 19/8
@@ -197,13 +196,17 @@
             <a class="close-feedback" href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
             <label for="name-feedback">Ваше имя:</label>
             <label for="mail-feedback">Ваш e-mail:</label>
-            <input id="name-feedback" type="text" placeholder="Представьтесь, пожалуйста" required >
+            <input class="name-feedback" id="name-feedback" type="text" placeholder="Представьтесь, пожалуйста" required >
             <input id="mail-feedback" type="email" placeholder="Для отправки ответа" required>
             <label for="text-feedback">Текст письма:</label>
             <textarea id="text-feedback" rows="4" placeholder="В свободной форме"></textarea>
             <button class="btn" type="submit">Отправить</button>
           </form>
-        </div>
+        </div>  
+        </div>  
+      </div>
+      
+      <div class="layout-position"><!--Класс для центровки содержимого-->
         <div class="footer-text">
           <div class="social-btns">
             <a class="social-btn" href="#1"></a>
