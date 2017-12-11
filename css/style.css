@@ -9,18 +9,23 @@ body {
 }
 
 .main-header {
+  min-width: 1440px;
   background-color: #eeeeee;
   padding: 50px 0 1px 0;
 }
 
-.layout-position {
-  margin: 0 auto;
-  width: 1160px;
+.main-content,
+.catalog-container,
+.main-footer {
+  min-width: 1440px;
 }
 
-.map {
-  background: url('../img/map.png') 50% 50% no-repeat;
-  padding: 50px 0;
+#map {
+  width: 1440px;
+  height: 416px;
+  position: absolute;
+  margin-left: -140px;
+  background: url('../img/map.png');
 }
 
 .footer-address {
@@ -32,8 +37,12 @@ body {
   background-color: white;
   box-sizing: border-box;
   width: 319px;
-  height: 308px;
+  min-height: 308px;
   padding: 30px 50px;
+  
+  position: relative;
+  top: 50px;
+  margin-bottom: 100px;
 }
 
 .footer-address h3 {
@@ -46,7 +55,7 @@ body {
 .footer-address p {
   margin-top: 5px;
   margin-bottom: 15px;
-  padding-left: 3px;
+  padding-right: 10px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -59,15 +68,23 @@ body {
 
 .social-btn {
   display: inline-block;
+  box-sizing: border-box;
   background-color: #e1e1e1;
   width: 80px;
   height: 80px;
   border-radius: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 7px;
+  margin-right: 6px;
   margin-top: 75px;
   vertical-align: middle;
+  padding: 25px 10px;
+}
+
+.social-btn img {
+  display: block;
+  width: 36px;
+  height: 30px;
+  vertical-align: middle;
+  margin: auto;
 }
 
 .social-btn:hover,
@@ -80,42 +97,24 @@ body {
   opacity:  0.3;
 }
 
-.social-btn:first-child {
-  background-image: url('../img/svg-nerds/vk-icon.svg');
-}
-
-.social-btn:nth-child(2) {
-  background-image: url('../img/svg-nerds/fb-icon.svg');
-}
-
-.social-btn:nth-child(3) {
-  background-image: url('../img/svg-nerds/insta-icon.svg');
-}
-
 .footer-slogan {
   margin-left: 134px;
   margin-top: 69px;
 }
 
-.footer-slogan p{
+.footer-slogan p {
   margin: 0;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .footer-slogan span {
   font-size: 36px;
-  line-height: 50px;
+  line-height: 40px;
   font-weight: 700;
 }
 
 .visual-hidden {
   display: none;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -128,15 +127,6 @@ a {
 a:hover,
 a:focus {
   outline: none;
-}
-
-.logo:hover,
-.logo:focus {
-  opacity: 0.7; 
-}
-
-.logo:active {
-  opacity: 0.3;
 }
 
 /* Кнопки */
@@ -156,6 +146,7 @@ a:focus {
   background-color: #fb565a;
   border-radius: 3px;
 }
+
 .catalog-btn {   
   background-color: #eeeeee;
   color: #000000;
@@ -178,11 +169,11 @@ a:focus {
 .pagination-list {
   list-style: none;
   padding: 0;
-  margin-top: -13px;
+  margin-top: -15px;
   margin-bottom: 60px;
 }
 
-.pagination-list li{
+.pagination-list li {
   display: inline-block;
   vertical-align: middle;
 }
@@ -228,15 +219,36 @@ a:focus {
 }
 
 /* --- Главная страница --- */
+.layout-position {
+  margin: 0 auto;
+  padding: 0;
+  width: 1160px;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  margin-right: 15px
+}
+
+.logo:hover,
+.logo:focus {
+  opacity: 0.7; 
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
 .site-nav,
 .user-nav {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
   text-transform: uppercase;
   padding-top: 17px;
 }
@@ -257,7 +269,7 @@ a:focus {
 }
 
 .user-nav-cart::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -281,11 +293,20 @@ a:focus {
 /* --- Наша продукция --- */
 .product-items {
   display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   margin-top: 79px;
 }
 
 .product-item {
   margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.product-item:last-child {
+  margin-right: 0;
 }
 
 .product-item h3 {
@@ -313,20 +334,17 @@ a:focus {
 }
 
 .product-item-site .btn:hover, 
-.product-item-site .btn:focus 
-{
+.product-item-site .btn:focus {
   background-color: #e74246
 }
 
 .product-item-application .btn:hover,
-.product-item-application .btn:focus
-{
+.product-item-application .btn:focus {
   background-color: #00bc6c;
 }
 
 .product-item-presentation .btn:hover,
-.product-item-presentation .btn:focus 
-{
+.product-item-presentation .btn:focus {
   background-color: #eab534;
 }
 
@@ -349,7 +367,7 @@ a:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 60px;
   border-top: 1px solid #eeeeee;
 }
 
@@ -386,9 +404,10 @@ a:focus {
   font-weight: 700;
 }
 
-.about-us-services {
+.about-us-services ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .about-us-services li {
@@ -420,7 +439,7 @@ a:focus {
   text-align: left;
 }
 
-.stat-tbl td{
+.stat-tbl td {
   /*vertical-align:  super;*/
   font-size: 16px;
   line-height: 18px;
@@ -432,8 +451,9 @@ a:focus {
 /* * * Наши партнеры * * */
 .us-partners {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
@@ -443,12 +463,13 @@ a:focus {
 }
 
 .partner-separator {
-  content: "";
+  content: '';
   display: inline-block;
   width: 2px;
   height: 52px;
   background-color: #eeeeee;
   vertical-align: middle;
+  margin: 0 55px;
 }
 
 .partner-link {
@@ -463,6 +484,7 @@ a:focus {
 .partner-link:active {
   opacity: 0.1;
 }
+
 /* * * Сетка страницы каталога * * */
 .catalog-container {
   margin-top: 58px;
@@ -484,6 +506,7 @@ a:focus {
   flex-wrap: wrap;
   width: 1160px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .active-page {
@@ -491,7 +514,7 @@ a:focus {
 }
 
 .active-page::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   height: 1.8em;
@@ -587,7 +610,7 @@ a:focus {
 
 .filter-item {
   margin: 0;
-  margin-top: 4px;
+  margin-top: 3px;
   margin-bottom: 45px;
   padding: 0;
   border: none;
@@ -602,11 +625,21 @@ a:focus {
   margin-bottom: 10px
 }
 
+.filter-item:first-child legend {
+  letter-spacing: 0.5px;
+}
+
+.grids-filter,
+.blocks-filter {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .grids-filter li,
 .blocks-filter li {
   margin: 0;
   margin-left: -15px;
-  /*margin-top: 18px;*/
 }
 
 .grid-radio,
@@ -627,7 +660,7 @@ a:focus {
 
 .grid-radio + label::before,
 .block-check + label::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -718,7 +751,7 @@ a:focus {
 }
 
 .catalog-item {
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   position: relative;
   margin-bottom: 75px;
   width: 360px;
@@ -727,7 +760,7 @@ a:focus {
 }
 
 .catalog-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 360px;
   height: 40px;
@@ -748,38 +781,44 @@ a:focus {
 .item-info {
   position: absolute;
   top: 345px;
-  height: 230px;
   width: 360px;
+  min-height: 230px;
+  padding: 10px;
   background-color: #eeeeee;
   text-align: center;
-  /*display: none;*/
+  box-sizing: border-box;
   visibility: hidden;
   opacity: 0;
-  transition: all ease 0.5s;
+  transition: all ease 0.4s;
 }
 
-.item-info h3,
+.item-name {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top:  16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .item-info p {
   display: inline-block;
   width: 230px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
   vertical-align: middle;
-}
-
-.item-info h3 {
-  margin-top:  35px;
-  text-transform: uppercase;
 }
 
 .catalog-item:hover .item-info {
   opacity: 1;
   visibility: visible;
-  /*display: block;*/
 }
 
-/*Форма связи*/
+/*Форма обратной связи*/
 .feedback {
   visibility: hidden;
   display: flex;
@@ -883,7 +922,6 @@ a:focus {
   text-align: center;
   font-size: 0;
   transform: translateX(-50%);
-  
 }
 
 .slider-controls label {
@@ -900,7 +938,7 @@ a:focus {
 }
 
 .slider-controls label::after {
-  content: "";
+  content: '';
   
   position: absolute;
   top: 8px;
@@ -960,7 +998,7 @@ a:focus {
 #product-1:checked ~ .slider-controls .slider-controls-item--1::before,
 #product-2:checked ~ .slider-controls .slider-controls-item--2::before,
 #product-3:checked ~ .slider-controls .slider-controls-item--3::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   top: 50%;

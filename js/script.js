@@ -3,9 +3,8 @@ var feedbackBtn = document.querySelector('.feedback-btn');
 var feedbackClose = document.querySelector('.close-feedback');
 var login = feedbackForm.querySelector('.name-feedback');
 
-
-
-feedbackBtn.addEventListener('click', function () {
+feedbackBtn.addEventListener('click', function (evt) {
+  evt.preventDefault();
   feedbackForm.classList.add('feedback-show');
   login.focus();
 });
