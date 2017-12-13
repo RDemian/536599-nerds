@@ -2,6 +2,9 @@ var feedbackForm = document.querySelector('.feedback');
 var feedbackBtn = document.querySelector('.feedback-btn');
 var feedbackClose = document.querySelector('.close-feedback');
 var login = feedbackForm.querySelector('.name-feedback');
+var email= feedbackForm.querySelector('.mail-feedback');
+var submitBtn= feedbackForm.querySelector('.submitBtn');
+
 
 feedbackBtn.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -12,6 +15,19 @@ feedbackBtn.addEventListener('click', function (evt) {
 feedbackClose.addEventListener('click', function () {
   feedbackForm.classList.remove('feedback-show');
 });
+
+submitBtn.addEventListener('click', function () {
+  if (feedbackForm.classList.contains('feedback-bounce')) {
+      feedbackForm.classList.remove('feedback-bounce');  
+        }
+});
+
+feedbackForm.addEventListener('submit', function (evt) {
+  if (!login.value || !email.value) {
+    evt.preventDefault();
+    feedbackForm.classList.add('feedback-bounce');
+  }
+ });  
 
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {

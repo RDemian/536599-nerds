@@ -5,7 +5,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header"><!--Классу задем фон на всю ширину страницы-->
@@ -123,7 +123,6 @@
             <a class="partner-link" href="https://htmlacademy.ru/intensive/htmlcss">Html academy
               <img src="img/logo-1.png" alt="html academy" width="199" height="68">
             </a>
-            
             <a class="partner-link" href="#1">Borodinski
               <img src="img/logo-2.png" alt="Borodinski" width="209" height="90">
             </a>
@@ -152,11 +151,11 @@
             <a class="close-feedback" href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
             <label for="name-feedback">Ваше имя:</label>
             <label for="mail-feedback">Ваш e-mail:</label>
-            <input class="name-feedback" id="name-feedback" type="text"   placeholder="Представьтесь, пожалуйста" required >
-            <input id="mail-feedback" type="email" placeholder="Для отправки ответа" required>
+            <input class="name-feedback" id="name-feedback" type="text"   placeholder="Представьтесь, пожалуйста">
+            <input class="mail-feedback" id="mail-feedback" type="email" placeholder="Для отправки ответа">
             <label for="text-feedback">Текст письма:</label>
             <textarea id="text-feedback" rows="4" placeholder="В свободной форме"></textarea>
-            <button class="btn" type="submit">Отправить</button>
+            <button class="btn submitBtn" type="submit">Отправить</button>
           </form>
         </div> 
       </div>

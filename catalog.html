@@ -5,7 +5,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header"><!--Классу задем фон на всю ширину страницы-->
@@ -116,7 +116,7 @@
               <div class="sedona-content">
                 <img src="img/img-sedona.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">Sedona</a>
+                  <a class="item-name" href="#1">Sedona</a>
                   <p>Информационный сайт для туристов
                   </p>
                   <button class="btn" type="button" value="sedona-cost">9 900 РУБ.</button>
@@ -127,7 +127,7 @@
               <div class="pink-content">
                 <img src="img/img-pink.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">Pink</a>
+                  <a class="item-name" href="#1">Pink</a>
                   <p>Продуктовый лендинг приложения для iOS и Android</p>
                   <button class="btn" type="button" value="pink-cost">9 900 РУБ.</button>
                 </div>
@@ -137,7 +137,7 @@
               <div class="barbershop-content">
                 <img src="img/img-barbershop.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">Barbershop</a>
+                  <a class="item-name" href="#1">Barbershop</a>
                   <p>Сайт салоны красоты Для мужчин, да.</p>
                   <button class="btn" type="button" value="Barbershop-cost">9 900 РУБ.</button>
                 </div>
@@ -147,7 +147,7 @@
               <div class="mishka-content">
                 <img src="img/img-mishka.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">Mishka</a>
+                  <a class="item-name" href="#1">Mishka</a>
                   <p>Интернет магазин вязаных игрушек</p>
                   <button class="btn" type="button" value="mishka-cost">9 900 РУБ.</button>
                 </div>
@@ -157,7 +157,7 @@
               <div class="aplus-content">
                 <img src="img/img-aplus.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">A Plus</a>
+                  <a class="item-name" href="#1">A Plus</a>
                   <p>Лендинг курсов повышения квалификации
                   </p>
                   <button class="btn" type="button" value="A_Plus-cost">9 900 РУБ.</button>
@@ -168,7 +168,7 @@
               <div class="kvast-catalog">
                 <img src="img/img-kvast.jpg" alt="" width="360" height="576">
                 <div class="item-info">
-                  <a class="item-name">Кваст</a>
+                  <a class="item-name" href="#1">Кваст</a>
                   <p>Промо сайт производителя крафтового кваса</p>
                   <button class="btn" type="button" value="kvast-cost">9 900 РУБ.</button>
                 </div>
@@ -198,11 +198,11 @@
             <a class="close-feedback" href="#1"><img src="img/svg-nerds/close-cross.svg" width="21" height="21" alt="Закрыть"></a>
             <label for="name-feedback">Ваше имя:</label>
             <label for="mail-feedback">Ваш e-mail:</label>
-            <input class="name-feedback" id="name-feedback" type="text"   placeholder="Представьтесь, пожалуйста" required >
-            <input id="mail-feedback" type="email" placeholder="Для отправки ответа" required>
+            <input class="name-feedback" id="name-feedback" type="text"   placeholder="Представьтесь, пожалуйста">
+            <input id="mail-feedback" type="email" placeholder="Для отправки ответа">
             <label for="text-feedback">Текст письма:</label>
             <textarea id="text-feedback" rows="4" placeholder="В свободной форме"></textarea>
-            <button class="btn" type="submit">Отправить</button>
+            <button class="btn submitBtn" type="submit">Отправить</button>
           </form>
         </div> 
       </div>

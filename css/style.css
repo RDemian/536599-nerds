@@ -73,6 +73,146 @@ body {
   min-width: 200px;
 }
 
+/*Форма обратной связи*/
+.feedback {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 6;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 20px 40px rgba(0,1,1,0.75);
+          box-shadow: 0 20px 40px rgba(0,1,1,0.75);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 960px;
+  height: 590px;
+  padding: 75px 100px 85px 100px;
+  position: fixed;
+  top: 50%;
+  margin-top: -300px;
+  left: 50%;
+  margin-left: -480px;
+  
+  opacity: 0;
+  -webkit-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+}
+
+.feedback-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.feedback-bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        margin-top: -300px;
+    }
+    30% {
+        margin-top: -330px;
+    }
+    70% {
+        margin-top: -280px;
+    }
+    100% {
+        margin-top: -300px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        margin-top: -300px;
+    }
+    30% {
+        margin-top: -330px;
+    }
+    70% {
+        margin-top: -280px;
+    }
+    100% {
+        margin-top: -300px;
+    }
+}
+
+.close-feedback {
+  opacity: 0.3;
+}
+
+.close-feedback:hover,
+.close-feedback:focus {
+  opacity: 1;
+}
+
+.close-feedback:active {
+  opacity: 0.1;
+}
+
+.feedback h2 {
+  margin: 0;
+  font-size: 45px;
+  line-height: 45px;
+  margin-right: 400px; 
+}
+
+.feedback label {
+  width: 360px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.feedback input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 360px;
+  line-height: 26px;
+  padding: 10px;
+  border: none;
+  outline: 3px solid #d7dcde;
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+  outline: 3px solid #b4b9bb;
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+  outline: 3px solid #000000;
+}
+
+.feedback input:invalid {
+  color: #e74246;
+}
+
+.feedback textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 760px;
+  height: 118px;
+  margin-bottom: 45px;
+  padding: 10px;
+  outline: 3px solid #d7dcde;
+  border: none;
+}
+
 .footer-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,9 +637,20 @@ a:focus {
 }
 
 .partner-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 0;
   opacity: 0.2;
+}
+
+.partner-link:hover,
+.partner-link:focus {
+  opacity: 1;
+}
+
+.partner-link:active {
+  opacity: 0.1;
 }
 
 .partner-link:not(:first-child)::before {
@@ -511,13 +662,9 @@ a:focus {
   margin: auto 55px;
 }
 
-.partner-link:hover,
-.partner-link:focus {
-  opacity: 1;
-}
-
-.partner-link:active {
-  opacity: 0.1;
+.partner-link:hover::before,
+.partner-link:focus::before {
+  opacity: 0.2;
 }
 
 /* * * Сетка страницы каталога * * */
@@ -839,10 +986,21 @@ a:focus {
   min-height: 230px;
   padding: 26px 65px 40px 65px;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   
   background-color: #eeeeee;
   text-align: center;
@@ -881,109 +1039,6 @@ a:focus {
 .catalog-item:hover .item-info {
   opacity: 1;
   visibility: visible;
-}
-
-/*Форма обратной связи*/
-.feedback {
-  visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 6;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 20px 40px rgba(0,1,1,0.75);
-          box-shadow: 0 20px 40px rgba(0,1,1,0.75);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 960px;
-  height: 590px;
-  padding: 75px 100px 85px 100px;
-  position: fixed;
-  top: 50%;
-  margin-top: -300px;
-  left: 50%;
-  margin-left: -480px;
-  
-  opacity: 0;
-  -webkit-transition: all ease 0.7s;
-  -o-transition: all ease 0.7s;
-  transition: all ease 0.7s;
-}
-
-.feedback-show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.close-feedback {
-  opacity: 0.3;
-}
-
-.close-feedback:hover,
-.close-feedback:focus {
-  opacity: 1;
-}
-
-.close-feedback:active {
-  opacity: 0.1;
-}
-
-.feedback h2 {
-  margin: 0;
-  font-size: 45px;
-  line-height: 45px;
-  margin-right: 400px; 
-}
-
-.feedback label {
-  width: 360px;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.feedback input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 360px;
-  line-height: 26px;
-  padding: 10px;
-  border: none;
-  outline: 3px solid #d7dcde;
-}
-
-.feedback input:hover,
-.feedback textarea:hover {
-  outline: 3px solid #b4b9bb;
-}
-
-.feedback input:focus,
-.feedback textarea:focus {
-  outline: 3px solid #000000;
-}
-
-.feedback input:invalid {
-  color: #e74246;
-}
-
-.feedback textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 760px;
-  height: 118px;
-  margin-bottom: 45px;
-  padding: 10px;
-  outline: 3px solid #d7dcde;
-  border: none;
 }
 
 /* Слайдер */
@@ -1067,7 +1122,7 @@ a:focus {
   background-position: 100% 20px;
 }
 
-#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+#product-1:checked ~ .slider-list .slider-item:nth-child(1){
   display: block;
 }
 
